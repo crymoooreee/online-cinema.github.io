@@ -107,6 +107,164 @@ body {
     border-bottom: 1px solid hsl(0, 0%, 100%, 0.5);
     padding-top: 46px;
     padding-bottom: 63px;
+    display: flex;
+    gap: 9.5%;
+    align-items: top;
+}
+
+.session_date{
+    display: flex;
+    flex-direction: column;
+}
+
+.date_title{
+    color: var(--color_text);
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+.session_container {
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+
+.session_container input[type="radio"] {
+  display: none;
+}
+
+.session_day {
+  border: 1px solid hsl(0, 0%, 100%, 0.5);
+  border-radius: 5px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.session_day:hover {
+  background-color: #FE8E05;
+  color: #621402;
+}
+
+input[type="radio"]:checked + .session_day {
+  background-color: #FE8E05;
+  color: #621402;
+}
+
+/* стили текста */
+.mouth {
+  color: var(--color_text);
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+}
+
+.day {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 19px;
+  color: var(--color_text);
+}
+
+.day_week {
+  color: var(--color_text);
+  font-size: 19px;
+  line-height: 19px;
+  font-weight: 400;
+}
+
+input[type="radio"]:checked + .session_day .mouth,
+input[type="radio"]:checked + .session_day .day,
+input[type="radio"]:checked + .session_day .day_week {
+  color: #621402;
+}
+
+
+.cinema_list {
+    margin-top: 15px;
+    border-radius: 5px;
+    color: var(--color_text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    border: 1px solid hsl(0, 0%, 100%, 0.5);
+    background-color: hsl(0, 0%, 100%, 0.15);
+    height: 60px;
+    width: 470px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image: url("../img/Arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 15px;
+}
+
+.cinema_list:focus {
+    border: 1px solid hsl(0, 0%, 100%, 0.5);
+    outline: none;
+}
+
+.cinema_list option {
+    border: 1px solid hsl(0, 0%, 100%, 0.5);
+    background-color: #621402;
+    color: var(--color_text);
+    padding: 10px;
+}
+
+
+.time_list {
+    margin-top: 15px;
+    border-radius: 5px;
+    color: var(--color_text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    border: 1px solid hsl(0, 0%, 100%, 0.5);
+    background-color: hsl(0, 0%, 100%, 0.15);
+    height: 60px;
+    width: 108px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image: url("../img/Arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 15px;
+}
+
+.time_list:focus {
+    border: 1px solid hsl(0, 0%, 100%, 0.5);
+    outline: none;
+}
+
+.time_list option {
+    border: 1px solid hsl(0, 0%, 100%, 0.5);
+    background-color: #621402;
+    color: var(--color_text);
+    padding: 10px;
+}
+
+/* STIS */
+.sits {
+    height: 100vh;
 }
 
 

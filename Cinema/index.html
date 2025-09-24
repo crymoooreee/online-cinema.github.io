@@ -90,11 +90,71 @@
 
         <div class="session container">
             <div class="session_date">
+                <h1 class="date_title">Дата</h1>
+                <div class="session_container">
+                    <input type="radio" id="d27" name="date">
+                    <label for="d27" class="session_day">
+                        <span class="mouth">АПР</span>
+                        <span class="day">27</span>
+                        <span class="day_week">ПТ</span>
+                    </label>
+
+                    <input type="radio" id="d28" name="date">
+                    <label for="d28" class="session_day">
+                        <span class="mouth">АПР</span>
+                        <span class="day">28</span>
+                        <span class="day_week">СБ</span>
+                    </label>
+
+                    <input type="radio" id="d29" name="date" checked>
+                    <label for="d29" class="session_day">
+                        <span class="mouth">АПР</span>
+                        <span class="day">29</span>
+                        <span class="day_week">ВС</span>
+                    </label>
+
+                    <input type="radio" id="d30" name="date">
+                    <label for="d30" class="session_day">
+                        <span class="mouth">АПР</span>
+                        <span class="day">30</span>
+                        <span class="day_week">ПН</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="session_cinema">
+                <h1 class="date_title">Кинотеатр</h1>
+                <select name="cinema" id="cinema-select" class="cinema_list" >
+                    <option value="oct">Октябрь, ул. Калужская 28</option>
+                    <option value="cinemaPark">Синема Парк, ш. Космонавтов, 162Б</option>
+                    <option value="kinoMax">Киномакс, ул. Мира, 41/1</option>
+                </select>
 
             </div>
-            <div class="session"
+            <div class="session_time">
+                <h1 class="date_title">Время</h1>
+                <select name="cinema" id="time-select" class="time_list" >
+                    <option value="01:00">01:00</option>
+                    <option value="03:00">03:00</option>
+                    <option value="05:00">05:00</option>
+                    <option value="07:00">07:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="21:00">21:00</option>
+                    <option value="23:00">23:00</option>
+                </select>
+            </div>
         </div>
     </header>
+    <main>
+        <div class="sits">
+            
+        </div>
+    </main>
 </body>
 
 </html>
