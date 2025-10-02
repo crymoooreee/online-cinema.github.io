@@ -1,0 +1,116 @@
+body {
+    background-color: #621402;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.header {
+    background: linear-gradient(180deg, rgba(98,20,2,0.31) 0%, #621402 85.62%), url(../img/bg.png) no-repeat center top / cover;
+    min-height: 100vh;
+}
+
+.navbar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    margin-left: 17px;
+}
+.menu_item {
+    margin-right: 25px;
+}
+
+.menu_link {
+    color: var(--color_text);
+    text-decoration: none;
+}
+.ava {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 11px;
+    color: var(--color_text);
+}
+
+
+.film {
+    color: var(--color_text);
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+}
+.film_title_small {
+    opacity: 0.5;
+    line-height: 150%;
+    font-size: 24px;
+}
+.film_title {
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 11px;
+    margin-bottom: 23px;
+}
+.film_description{
+    font-size: 16px;
+    max-width: 560px;
+    line-height: 150%;
+}
+.film_trailer {
+    margin: auto;
+}
+
+
+.film_details {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 35px
+}
+.time {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.rating_current {
+    font-size: 24px;
+    line-height: 150%;
+}
+
+.session {
+    margin-top: 62px;
+    border-top: 1px solid hsl(0, 0%, 100%, 0.5);
+    border-bottom: 1px solid hsl(0, 0%, 100%, 0.5);
+    padding-top: 46px;
+    padding-bottom: 63px;
+}
+
+
+/* ROOT */
+:root{
+    --color_text: rgb(235, 235, 235);
+}
