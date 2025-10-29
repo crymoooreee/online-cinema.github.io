@@ -1,0 +1,359 @@
+/* Общие стили */
+body {
+  background-color: #621402;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--color_text);
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* Переменные */
+:root {
+  --color_text: rgb(235, 235, 235);
+}
+
+/* Шапка */
+.header {
+  background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%),
+    url(../IMG/bg.png) no-repeat center top / cover;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+/* Навигация */
+.navbar {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar img {
+  height: 40px;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  margin-left: 17px;
+  padding: 0;
+}
+
+.menu-item {
+  margin-right: 25px;
+}
+
+.menu-link {
+  color: var(--color_text);
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.2s;
+}
+
+.menu-link:hover {
+  opacity: 0.8;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 11px;
+  color: var(--color_text);
+}
+
+.avatar {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Информация о фильме */
+.film {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.film-info {
+  max-width: 560px;
+}
+
+.film-title-small {
+  opacity: 0.5;
+  line-height: 150%;
+  font-size: 24px;
+  display: block;
+}
+
+.film-title {
+  font-size: 36px;
+  line-height: 1.2;
+  margin: 11px 0 23px;
+}
+
+.film-description {
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 50px;
+}
+
+.film-trailer {
+  display: block;
+  margin-left: auto;
+  text-decoration: none;
+}
+
+#video-container {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+/* Детали фильма */
+.film-details {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.time,
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.rating-current {
+  font-size: 24px;
+  line-height: 150%;
+}
+
+/* Выбор сеанса */
+.session {
+  margin-top: 62px;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.5);
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+  padding: 46px 0 63px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-end;
+}
+
+.session_date {
+  flex: 1;
+}
+
+.date_title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.session_container {
+  display: flex;
+  gap: 12px;
+}
+
+.session_day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--color_text);
+  font-size: 14px;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.session_day:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + .session_day {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.session-cinema,
+.session-time {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.session-label {
+  font-size: 16px;
+  color: var(--color_text);
+}
+
+.select {
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--color_text);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  outline: none;
+}
+
+.select:focus {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Схема зала — ЦЕНТРИРОВАНА */
+.scheme {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.scheme-svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 30px 0;
+  width: 100%;
+}
+.legend-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 20px;
+}
+
+.legend-text-label {
+  font-size: 14px;
+  color: var(--color_text);
+}
+
+/* Стили мест */
+path {
+  fill: #555; /* Свободные — темно-серый */
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 1;
+  cursor: pointer;
+  transition: fill 0.2s;
+}
+
+path:hover:not(.booked):not(.active) {
+  fill: #666; /* Светлее при наведении */
+}
+
+path.booked {
+  fill: #333; /* Занято — ещё темнее */
+  cursor: not-allowed;
+}
+
+path.active {
+  fill: #ff7700; /* Выбрано — оранжевый */
+  stroke: white;
+  stroke-width: 1.5;
+}
+
+/* Цена и кнопка */
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 60px;
+}
+
+.price-tag {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.price-label {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.price-total {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.ruble {
+  font-size: 20px;
+}
+
+.button-pay {
+  background: #ff4d4d;
+  color: white;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.button-pay:hover {
+  background: #e03a3a;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .film {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .film-info {
+    max-width: 100%;
+  }
+
+  .film-trailer {
+    margin: 0 auto;
+  }
+
+  .session {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .legend-label {
+    margin-bottom: 10px;
+  }
+
+  .scheme {
+    position: relative;
+    padding: 0 15px;
+  }
+
+  .scheme-svg {
+    display: block;
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    transform: translateX(-50%);
+    left: 50%;
+    position: relative;
+  }
+}
